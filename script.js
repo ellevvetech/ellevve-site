@@ -64,7 +64,20 @@
     const m = parseFloat(getComputedStyle(el).scrollMarginTop) || 0;
     return box.getBoundingClientRect().top + window.scrollY - m;
   }
-  function focusLater(el) { setTimeout(() => el && el.focus({ preventScroll: true }), reduce ? 0 : 900); }
+  // foca o destino só quando a rolagem termina (antes disso o fechamento ainda pode estar inert)
+  function focusLater(el, before) {
+    let done = false;
+    const go = () => {
+      if (done) return; done = true;
+      window.removeEventListener('scrollend', go);
+      if (before) before();
+      if (el) el.focus({ preventScroll: true });
+    };
+    if (reduce) { setTimeout(go, 0); return; }
+    const hasEnd = 'onscrollend' in window;
+    if (hasEnd) window.addEventListener('scrollend', go);
+    setTimeout(go, hasEnd ? 2500 : 900);
+  }
   $$('a[href^="#"]').forEach(a => {
     const id = a.getAttribute('href').slice(1);
     if (!id || a.classList.contains('skip')) return;
@@ -73,9 +86,13 @@
       if (!el) return;
       e.preventDefault();
       closeMenu();
-      scrollToY(targetY(el));
-      if (id === 'contato') setTimeout(() => { openClosing(true); focusLater($('.closing-ctas a')); }, reduce ? 0 : 50);
-      else focusLater(el);
+      const y = Math.min(targetY(el), document.documentElement.scrollHeight - window.innerHeight);
+      const moving = Math.abs(window.scrollY - y) > 2;
+      scrollToY(y);
+      const dest = id === 'contato' ? $('.closing-ctas a') : el;
+      const before = id === 'contato' ? () => openClosing(true) : null;
+      if (moving) focusLater(dest, before);
+      else { if (before) before(); dest.focus({ preventScroll: true }); }
       history.replaceState(null, '', '#' + id);
     });
   });
@@ -209,6 +226,7 @@
   /* ---------- fechamento: foco só com a cortina aberta ---------- */
   const closing = $('#closing'), curtain = $('#contato');
   function openClosing(open) {
+    if (!open && closing.contains(document.activeElement)) document.activeElement.blur();
     closing.inert = !open;
     if (open) closing.removeAttribute('aria-hidden'); else closing.setAttribute('aria-hidden', 'true');
   }
