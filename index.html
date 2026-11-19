@@ -1,17 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ellevve Tech | Tecnologia que eleva o seu negócio.</title>
-<meta name="description" content="Sistemas sob medida, automação de processos, produtos SaaS e modernização de sistemas legados. Entendemos o seu processo antes de construir.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ellevve Tech | Sistemas e sites sob medida</title>
+<meta name="description" content="Criamos o sistema da sua empresa, sob medida para o seu jeito de trabalhar: atendimento no WhatsApp com IA, agenda, CRM e sites. Fale com a gente.">
 <link rel="canonical" href="https://ellevvetech.com.br/">
 <meta property="og:url" content="https://ellevvetech.com.br/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ellevve Tech">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="Ellevve Tech | Tecnologia que eleva o seu negócio.">
-<meta property="og:description" content="Sistemas sob medida, automação de processos, produtos SaaS e modernização de sistemas legados. Entendemos o seu processo antes de construir.">
+<meta property="og:title" content="Ellevve Tech | Sistemas e sites sob medida">
+<meta property="og:description" content="Sistemas e sites para empresas que querem ser mais tecnológicas, feitos sob medida para o seu jeito de trabalhar.">
 <meta property="og:image" content="https://ellevvetech.com.br/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -21,173 +21,279 @@
 <link rel="icon" href="assets/ellevve-selo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Unbounded:wght@200;300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>
+(function(){var d=document.documentElement;d.classList.add('js');
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('motion');}
+setTimeout(function(){if(!d.classList.contains('ready')){d.classList.remove('motion');}},3500);})();
+</script>
 </head>
 <body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-<header>
-  <div class="wrap">
-    <a href="#topo"><img src="assets/ellevve-wordmark-compacta.png" alt="Ellevve Tech"></a>
-    <nav aria-label="Principal">
-      <a href="#o-que-fazemos">O que fazemos</a>
-      <a href="#como-funciona">Como funciona</a>
-      <a href="#para-quem">Para quem</a>
-      <a href="#contato" class="btn-nav">Contato</a>
-    </nav>
+<header class="site-header" id="header">
+  <nav class="nav pill-glass" aria-label="Principal">
+    <a class="nav-logo" href="#topo" aria-label="Ellevve Tech, voltar ao início">
+      <img src="assets/ellevve-wordmark-compacta.png" width="128" height="32" alt="Ellevve Tech">
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#modulos" data-nav="0">O que fazemos</a></li>
+      <li><a href="#processo" data-nav="1">Como funciona</a></li>
+      <li><a href="#para-quem" data-nav="2">Para quem</a></li>
+      <li><a href="#contato" data-nav="3">Contato</a></li>
+    </ul>
+    <span class="nav-dot" aria-hidden="true"></span>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel">
+      <span class="nav-toggle-label">Menu</span>
+      <span class="nav-toggle-icon" aria-hidden="true"><i></i><i></i></span>
+    </button>
+  </nav>
+  <div class="nav-panel pill-glass" id="nav-panel" hidden>
+    <a href="#modulos">O que fazemos</a>
+    <a href="#processo">Como funciona</a>
+    <a href="#para-quem">Para quem</a>
+    <a href="#contato">Contato</a>
   </div>
 </header>
 
-<main>
-<div id="topo">
-  <div class="hero-bg" aria-hidden="true">
-    <canvas></canvas>
-    <div class="vig"></div>
-    <div class="glow"></div>
-  </div>
-  <div class="hero-in">
-    <h1>Tecnologia que eleva<br>o seu negócio.</h1>
-    <p class="hero-p">Sistemas, automações e produtos SaaS para empresas que ainda rodam no papel e na planilha. Entendemos o seu processo antes de construir.</p>
-    <div class="ctas">
-      <a class="btn btn-p" href="#contato">Fale com a gente
-        <svg width="17" height="17" viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><line x1="4" y1="12" x2="19" y2="12" stroke-linecap="round"/><polyline points="13 6 19 12 13 18" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a class="btn btn-s" href="#o-que-fazemos">Ver o que fazemos</a>
-    </div>
-    <div class="chips-wrap">
-      <span class="label">O que a gente entrega</span>
-      <div id="chips-hero">
-        <span class="chip"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>Sistemas sob medida</span>
-        <span class="chip"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="7" r="3"/><circle cx="17" cy="17" r="3"/><path d="M10 7h4a3 3 0 0 1 3 3v4" stroke-linecap="round"/></svg>Automação de processos</span>
-        <span class="chip"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15a4 4 0 0 1 .6-7.9A5.5 5.5 0 0 1 16.4 8 3.6 3.6 0 0 1 19 15H5Z" stroke-linejoin="round"/></svg>Produtos SaaS</span>
-        <span class="chip"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.6-5.9" stroke-linecap="round"/><polyline points="20 4 20 10 14 10" stroke-linecap="round" stroke-linejoin="round"/></svg>Modernização de legado</span>
+<div class="page" id="page">
+<main id="conteudo">
+
+  <!-- 2. TOPO -->
+  <section class="hero" id="topo" data-section="-1" tabindex="-1">
+    <canvas class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="aurora aurora--hero" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="grid-lines" aria-hidden="true"></div>
+    <span class="bridge bridge--1" aria-hidden="true"></span>
+
+    <div class="hero-inner">
+      <h1 class="hero-title">
+        <span class="hero-title-text" data-reveal="hero">Tecnologia que eleva o seu negócio.</span>
+        <span class="hero-sheen hero-sheen--a" aria-hidden="true">Tecnologia que eleva o seu negócio.</span>
+        <span class="hero-sheen hero-sheen--b" aria-hidden="true">Tecnologia que eleva o seu negócio.</span>
+      </h1>
+      <p class="hero-lead" data-reveal="hero">Criamos o sistema da sua empresa, feito sob medida para o seu jeito de trabalhar.</p>
+      <div class="hero-ctas">
+        <span class="cta-wrap" data-fade="hero"><a class="pill pill--primary" href="#monte" data-magnetic>Monte o seu sistema<span class="pill-dot" aria-hidden="true"></span></a></span>
+        <span class="cta-wrap" data-fade="hero"><a class="pill" href="#contato" data-magnetic>Fale com a gente</a></span>
       </div>
     </div>
-  </div>
+
+    <div class="marquee marquee--hero" aria-hidden="true" data-fade="hero">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span>Atendimento no WhatsApp com IA</span><i></i><span>Agenda</span><i></i><span>CRM</span><i></i><span>Sistemas e sites sob medida</span><i></i>
+          <span>Atendimento no WhatsApp com IA</span><i></i><span>Agenda</span><i></i><span>CRM</span><i></i><span>Sistemas e sites sob medida</span><i></i>
+        </div>
+        <div class="marquee-group">
+          <span>Atendimento no WhatsApp com IA</span><i></i><span>Agenda</span><i></i><span>CRM</span><i></i><span>Sistemas e sites sob medida</span><i></i>
+          <span>Atendimento no WhatsApp com IA</span><i></i><span>Agenda</span><i></i><span>CRM</span><i></i><span>Sistemas e sites sob medida</span><i></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. O QUE O SEU SISTEMA PODE TER -->
+  <section class="modules" id="modulos" data-section="0" data-step="0" tabindex="-1" aria-labelledby="mod-h">
+    <span class="bridge bridge--2" aria-hidden="true"></span>
+    <div class="ambient ambient--mod" aria-hidden="true"></div>
+    <div class="mod-bg" aria-hidden="true">
+      <span class="mod-bg-num is-on">01</span><span class="mod-bg-num">02</span><span class="mod-bg-num">03</span><span class="mod-bg-num">04</span>
+    </div>
+
+    <div class="mod-ruler">
+    <span class="r-track" aria-hidden="true"><span class="r-fill"></span></span>
+    <span class="r-link" aria-hidden="true"></span>
+    <ol class="r-list" aria-label="Passos">
+      <li><button type="button" data-goto="0" aria-current="step"><span class="r-node"></span><span class="r-num">01</span></button></li>
+      <li><button type="button" data-goto="1"><span class="r-node"></span><span class="r-num">02</span></button></li>
+      <li><button type="button" data-goto="2"><span class="r-node"></span><span class="r-num">03</span></button></li>
+      <li><button type="button" data-goto="3"><span class="r-node"></span><span class="r-num">04</span></button></li>
+    </ol>
+    </div>
+
+    <div class="mod-inner">
+      <h2 class="eyebrow" id="mod-h"><span class="eyebrow-line" aria-hidden="true"></span>O que o seu sistema pode ter</h2>
+      <div class="mod-steps">
+        <article class="mod-step is-active" data-i="0">
+          <p class="mod-num" data-reveal>01</p>
+          <h3 class="mod-title" data-reveal>Atendimento no WhatsApp com agente de IA</h3>
+          <p class="mod-desc" data-reveal>Um agente de IA para atender os seus clientes no WhatsApp, no tom da sua empresa.</p>
+        </article>
+        <article class="mod-step" data-i="1">
+          <p class="mod-num" data-reveal>02</p>
+          <h3 class="mod-title" data-reveal>Agenda</h3>
+          <p class="mod-desc" data-reveal>Horários e compromissos organizados em um só lugar, ligados ao atendimento.</p>
+        </article>
+        <article class="mod-step" data-i="2">
+          <p class="mod-num" data-reveal>03</p>
+          <h3 class="mod-title" data-reveal>CRM</h3>
+          <p class="mod-desc" data-reveal>O histórico de cada cliente e de cada conversa, para a sua equipe saber com quem está falando.</p>
+        </article>
+        <article class="mod-step" data-i="3">
+          <p class="mod-num" data-reveal>04</p>
+          <h3 class="mod-title" data-reveal>Sistema completo</h3>
+          <p class="mod-desc" data-reveal>Os três juntos e conectados entre si. E o que mais a sua empresa precisar, desenhado do zero.</p>
+          <div class="mod-system"><span class="ms-line" aria-hidden="true"></span>
+          <ul class="ms-list" aria-label="Conectados">
+            <li><span class="ms-node" aria-hidden="true"></span><span class="ms-label">Atendimento</span></li>
+            <li><span class="ms-node" aria-hidden="true"></span><span class="ms-label">Agenda</span></li>
+            <li><span class="ms-node" aria-hidden="true"></span><span class="ms-label">CRM</span></li>
+          </ul></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SISTEMAS E SITES SOB MEDIDA -->
+  <section class="custom" id="sob-medida" data-section="0" aria-labelledby="custom-h">
+    <span class="bridge bridge--3" aria-hidden="true"></span>
+    <div class="outline-bg custom-bg" aria-hidden="true">SOB MEDIDA</div>
+    <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span>Sob medida</p>
+    <h2 class="statement" id="custom-h" data-scrub-words>Sistemas e sites para empresas que querem ser mais tecnológicas.</h2>
+    <p class="custom-lead" data-reveal>Se o seu negócio precisa de um sistema, de um site ou de um processo automatizado, a gente desenha, constrói e evolui com você.</p>
+  </section>
+
+  <!-- 5. COMO FUNCIONA -->
+  <section class="process" id="processo" data-section="1" tabindex="-1" aria-labelledby="proc-h">
+    <span class="bridge bridge--4" aria-hidden="true"></span>
+    <div class="ambient ambient--proc" aria-hidden="true"></div>
+    <h2 class="eyebrow" id="proc-h"><span class="eyebrow-line" aria-hidden="true"></span>Como funciona</h2>
+    <div class="p-wrap">
+    <span class="p-fill" aria-hidden="true"></span>
+    <ol class="p-list">
+      <li class="p-step">
+        <span class="p-node" aria-hidden="true"></span>
+        <span class="p-numeral" aria-hidden="true"><span class="n-out">01</span><span class="n-in">01</span></span>
+        <div class="p-text">
+          <h3 class="p-title" data-reveal>Entendemos</h3>
+          <p class="p-desc" data-reveal>Sentamos com quem executa o processo hoje e mapeamos onde o tempo se perde.</p>
+        </div>
+      </li>
+      <li class="p-step">
+        <span class="p-node" aria-hidden="true"></span>
+        <span class="p-numeral" aria-hidden="true"><span class="n-out">02</span><span class="n-in">02</span></span>
+        <div class="p-text">
+          <h3 class="p-title" data-reveal>Desenhamos</h3>
+          <p class="p-desc" data-reveal>Definimos o escopo, as telas e o que fica de fora, com prioridades claras.</p>
+        </div>
+      </li>
+      <li class="p-step">
+        <span class="p-node" aria-hidden="true"></span>
+        <span class="p-numeral" aria-hidden="true"><span class="n-out">03</span><span class="n-in">03</span></span>
+        <div class="p-text">
+          <h3 class="p-title" data-reveal>Construímos</h3>
+          <p class="p-desc" data-reveal>Entregas em ciclos curtos, com a sua equipe testando o sistema antes de ficar pronto.</p>
+        </div>
+      </li>
+      <li class="p-step">
+        <span class="p-node" aria-hidden="true"></span>
+        <span class="p-numeral" aria-hidden="true"><span class="n-out">04</span><span class="n-in">04</span></span>
+        <div class="p-text">
+          <h3 class="p-title" data-reveal>Evoluímos</h3>
+          <p class="p-desc" data-reveal>Acompanhamos o uso e ajustamos conforme a operação cresce.</p>
+        </div>
+      </li>
+    </ol>
+    </div>
+  </section>
+
+  <!-- 6. PARA QUEM -->
+  <section class="audience" id="para-quem" data-section="2" tabindex="-1" aria-labelledby="aud-h">
+    <span class="bridge bridge--5" aria-hidden="true"></span>
+    <div class="grid-lines grid-lines--soft" aria-hidden="true"></div>
+    <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span>Para quem</p>
+    <h2 class="audience-title" id="aud-h" data-reveal>Para qualquer empresa que queira elevar o seu negócio.</h2>
+    <p class="audience-lead" data-reveal>Qualquer segmento. Se a sua empresa tem um processo que consome tempo ou uma ideia que ainda não saiu do papel, vamos conversar.</p>
+  </section>
+
+  <!-- 7. MONTE O SEU SISTEMA -->
+  <section class="builder" id="monte" data-section="3" tabindex="-1" aria-labelledby="build-h">
+    <span class="bridge bridge--6" aria-hidden="true"></span>
+    <div class="ambient ambient--build" aria-hidden="true"></div>
+    <div class="b-head">
+      <h2 class="b-title" id="build-h" data-reveal>Monte o seu sistema.</h2>
+      <p class="b-lead" data-reveal>Escolha o que a sua empresa precisa. A gente conversa sobre o resto.</p>
+    </div>
+
+    <div class="b-body">
+      <div class="b-opts" role="group" aria-label="Opções do seu sistema">
+        <span class="b-link" aria-hidden="true"></span>
+        <div class="b-row"><span class="b-node" aria-hidden="true"></span><span class="b-branch" aria-hidden="true"></span>
+          <button class="opt opt--long" type="button" aria-pressed="false" data-label="Atendimento no WhatsApp com IA"><span class="opt-check" aria-hidden="true"></span>Atendimento no WhatsApp com IA</button></div>
+        <div class="b-row"><span class="b-node" aria-hidden="true"></span><span class="b-branch" aria-hidden="true"></span>
+          <button class="opt" type="button" aria-pressed="false" data-label="Agenda"><span class="opt-check" aria-hidden="true"></span>Agenda</button></div>
+        <div class="b-row"><span class="b-node" aria-hidden="true"></span><span class="b-branch" aria-hidden="true"></span>
+          <button class="opt" type="button" aria-pressed="false" data-label="CRM"><span class="opt-check" aria-hidden="true"></span>CRM</button></div>
+        <div class="b-row"><span class="b-node" aria-hidden="true"></span><span class="b-branch" aria-hidden="true"></span>
+          <button class="opt" type="button" aria-pressed="false" data-label="Site"><span class="opt-check" aria-hidden="true"></span>Site</button></div>
+        <div class="b-row"><span class="b-node" aria-hidden="true"></span><span class="b-branch" aria-hidden="true"></span>
+          <button class="opt" type="button" aria-pressed="false" data-label="Outra ideia" id="opt-outra" aria-controls="b-idea-wrap"><span class="opt-check" aria-hidden="true"></span>Outra ideia</button></div>
+      </div>
+
+      <div class="b-summary">
+        <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span>O seu sistema</p>
+        <ul class="b-chosen" id="b-chosen" aria-live="polite"></ul>
+        <p class="b-empty" id="b-empty">Nenhuma opção escolhida ainda.</p>
+        <div class="b-idea-wrap" id="b-idea-wrap" hidden>
+          <label class="b-label" for="b-idea">Outra ideia <span>(opcional)</span></label>
+          <textarea class="b-idea" id="b-idea" rows="2" placeholder="Conte em poucas palavras"></textarea>
+        </div>
+        <div class="b-actions">
+          <span class="cta-wrap"><a class="pill pill--primary" id="b-send" href="mailto:contato@ellevve.tech?subject=Quero%20elevar%20o%20meu%20neg%C3%B3cio%20com%20a%20Ellevve%20Tech" data-magnetic>Enviar para a Ellevve Tech<span class="pill-dot" aria-hidden="true"></span></a></span>
+          <span class="cta-wrap"><a class="pill" id="b-send-wa" href="https://wa.me/5561998366871?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Ellevve%20Tech%20e%20quero%20conversar%20sobre%20o%20sistema%20da%20minha%20empresa." target="_blank" rel="noopener" data-magnetic>Enviar pelo WhatsApp</a></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
 </div>
 
-<section id="o-que-fazemos" class="sec light">
-  <div class="wrap">
-    <p class="eyebrow">O que fazemos</p>
-    <h2>Software feito para o seu processo, não o contrário.</h2>
-    <p class="lead">Entramos onde a operação ainda depende de gente repetindo tarefa. Usamos IA como ferramenta de desenvolvimento para entregar mais rápido.</p>
-    <div id="cards-servicos" class="grid g4">
-      <article class="card lc">
-        <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="20" x2="9" y2="9"/></svg>
-        <h3>Sistemas sob medida</h3>
-        <p>Plataformas internas, cadastros, ordens de serviço e aprovações desenhados para o jeito que a sua empresa trabalha.</p>
-      </article>
-      <article class="card lc">
-        <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6.5" cy="6.5" r="2.8"/><circle cx="17.5" cy="17.5" r="2.8"/><path d="M9.3 6.5H15a2.5 2.5 0 0 1 2.5 2.5v5.7" stroke-linecap="round"/><path d="M6.5 9.3v5.2" stroke-linecap="round"/></svg>
-        <h3>Automação de processos</h3>
-        <p>Atendimento, cobranças e integrações entre sistemas que passam a rodar sozinhos.</p>
-      </article>
-      <article class="card lc">
-        <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15a4 4 0 0 1 .6-7.9A5.5 5.5 0 0 1 16.4 8 3.6 3.6 0 0 1 19 15H5Z" stroke-linejoin="round"/><line x1="12" y1="12" x2="12" y2="20" stroke-linecap="round"/></svg>
-        <h3>Produtos SaaS</h3>
-        <p>Do primeiro protótipo ao produto online, para quem quer transformar um serviço em software.</p>
-      </article>
-      <article class="card lc">
-        <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.6-5.9" stroke-linecap="round"/><polyline points="20 4 20 10 14 10" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <h3>Modernização de legado</h3>
-        <p>Sistemas antigos que ninguém quer mexer: avaliamos o cenário e planejamos a transição para algo mais moderno.</p>
-      </article>
-    </div>
-  </div>
-</section>
+<!-- 8. FECHAMENTO (cortina) -->
+<div class="curtain" id="contato" tabindex="-1">
+  <footer class="closing" id="closing" inert aria-hidden="true">
+    <div class="aurora aurora--closing" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="grid-lines grid-lines--closing" aria-hidden="true"></div>
 
-<section id="como-funciona" class="sec dark">
-  <div class="wrap">
-    <p class="eyebrow">Como funciona</p>
-    <h2>Quatro passos, sem sumir no meio do caminho.</h2>
-    <p class="lead">Cada etapa termina em algo concreto que você vê e aprova antes de seguir.</p>
-    <div id="passos" class="grid g4">
-      <article class="card dc">
-        <div class="num"><b>01</b><i></i></div>
-        <h3>Entendemos</h3>
-        <p>Sentamos com quem executa o processo hoje e mapeamos onde o tempo se perde.</p>
-      </article>
-      <article class="card dc">
-        <div class="num"><b>02</b><i></i></div>
-        <h3>Desenhamos</h3>
-        <p>Definimos o escopo, as telas e o que fica de fora, com prioridades claras.</p>
-      </article>
-      <article class="card dc">
-        <div class="num"><b>03</b><i></i></div>
-        <h3>Construímos</h3>
-        <p>Entregas em ciclos curtos, com a sua equipe usando o sistema antes de ficar pronto.</p>
-      </article>
-      <article class="card dc">
-        <div class="num"><b>04</b><i></i></div>
-        <h3>Evoluímos</h3>
-        <p>Acompanhamos o uso e ajustamos conforme a operação cresce.</p>
-      </article>
+    <div class="marquee marquee--closing" aria-hidden="true">
+      <div class="marquee-track marquee-track--rev">
+        <div class="marquee-group">
+          <span>Atendimento no WhatsApp com IA</span><i></i><span>Agenda</span><i></i><span>CRM</span><i></i><span>Sistemas e sites sob medida</span><i></i>
+          <span>Atendimento no WhatsApp com IA</span><i></i><span>Agenda</span><i></i><span>CRM</span><i></i><span>Sistemas e sites sob medida</span><i></i>
+        </div>
+        <div class="marquee-group">
+          <span>Atendimento no WhatsApp com IA</span><i></i><span>Agenda</span><i></i><span>CRM</span><i></i><span>Sistemas e sites sob medida</span><i></i>
+          <span>Atendimento no WhatsApp com IA</span><i></i><span>Agenda</span><i></i><span>CRM</span><i></i><span>Sistemas e sites sob medida</span><i></i>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
 
-<section id="para-quem" class="sec light">
-  <div class="wrap">
-    <p class="eyebrow">Para quem</p>
-    <h2>Para quem já tem operação e precisa que ela acompanhe.</h2>
-    <div id="cards-paraquem" class="grid g2">
-      <article class="card lc pq">
-        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11" stroke-linejoin="round"/><rect x="9.5" y="13" width="5" height="7"/></svg>
-        <h3>PMEs tradicionais</h3>
-        <p>Negócios que cresceram no WhatsApp, na planilha e na caderneta. A gente organiza o que já funciona e tira o processo do improviso.</p>
-        <ul>
-          <li>Cadastro e histórico em um só lugar</li>
-          <li>Atendimento com respostas automáticas</li>
-          <li>Menos tarefas repetitivas no dia a dia</li>
-        </ul>
-      </article>
-      <article class="card lc pq">
-        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="8" height="12"/><rect x="13" y="4" width="8" height="16"/><line x1="6" y1="12" x2="8" y2="12"/><line x1="16" y1="8" x2="18" y2="8"/><line x1="16" y1="12" x2="18" y2="12"/></svg>
-        <h3>Médias e grandes com legado</h3>
-        <p>Empresas com sistema antigo, planilhas paralelas e áreas que não conversam. Avaliamos o cenário e planejamos a modernização em etapas.</p>
-        <ul>
-          <li>Apoio na migração de dados</li>
-          <li>Integração entre ERP, planilhas e portais</li>
-          <li>Painéis para apoiar decisões</li>
-        </ul>
-      </article>
+    <div class="closing-main">
+      <div class="closing-copy">
+        <p class="eyebrow c-seq"><span class="eyebrow-line" aria-hidden="true"></span>Contato</p>
+        <h2 class="closing-title" id="closing-title">Conte o processo que mais te consome tempo.</h2>
+        <div class="closing-ctas">
+          <span class="cta-wrap c-seq"><a class="pill" href="https://wa.me/5561998366871?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Ellevve%20Tech%20e%20quero%20conversar%20sobre%20o%20sistema%20da%20minha%20empresa." target="_blank" rel="noopener" data-magnetic aria-label="Conversar com a Ellevve Tech no WhatsApp">WhatsApp</a></span>
+          <span class="cta-wrap c-seq"><a class="pill pill--primary" href="mailto:contato@ellevve.tech" data-magnetic>contato@ellevve.tech<span class="pill-dot" aria-hidden="true"></span></a></span>
+          <span class="cta-wrap c-seq"><a class="pill" href="https://www.instagram.com/ellevve.tech" target="_blank" rel="noopener" data-magnetic aria-label="Instagram da Ellevve Tech, abre em nova aba">Instagram</a></span>
+          <span class="cta-wrap c-seq"><button class="pill pill--round" type="button" id="to-top" data-magnetic aria-label="Voltar ao topo"><span class="arrow-up" aria-hidden="true"></span></button></span>
+        </div>
+      </div>
+      <div class="closing-seal c-seal">
+        <img class="seal-img" src="assets/ellevve-selo.png" width="640" height="640" alt="Selo Ellevve Tech: Tecnologia que eleva o seu negócio." loading="lazy" decoding="async">
+      </div>
     </div>
-  </div>
-</section>
 
-<section id="contato" class="sec contact">
-  <div class="wrap">
-    <p class="eyebrow">Contato</p>
-    <h2>Conte o processo que mais te consome tempo.</h2>
-    <p class="lead">A primeira conversa é para entender a sua operação. Se fizer sentido, voltamos com os próximos passos.</p>
-    <div class="ctas">
-      <a class="btn btn-p" href="mailto:contato@ellevve.tech?subject=Quero%20elevar%20meu%20processo%20na%20Ellevve%20Tech">
-        <svg width="20" height="20" viewBox="0 0 24 24" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3.5 7 12 13 20.5 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        contato@ellevve.tech
-      </a>
-      <a class="btn btn-s" href="https://www.instagram.com/ellevve.tech" target="_blank" rel="noopener noreferrer">
-        <svg width="20" height="20" viewBox="0 0 24 24" stroke-width="1.7" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1.1" fill="#17D3F5" stroke="none"/></svg>
-        @ellevve.tech
-      </a>
+    <div class="closing-foot c-foot">
+      <p class="foot-copy">© 2026 Ellevve Tech. Todos os direitos reservados.</p>
     </div>
-  </div>
-</section>
-</main>
+  </footer>
+</div>
 
-<footer>
-  <div id="rodape-conteudo">
-    <div class="f-brand">
-      <img src="assets/ellevve-selo.png" alt="Selo Ellevve Tech" width="64" height="64">
-      <div><b>Ellevve Tech</b><span>Tecnologia que eleva o seu negócio.</span></div>
-    </div>
-    <div class="f-links">
-      <a href="mailto:contato@ellevve.tech">contato@ellevve.tech</a>
-      <a href="https://www.instagram.com/ellevve.tech" target="_blank" rel="noopener noreferrer">Instagram</a>
-    </div>
-    <p class="copy">© 2026 Ellevve Tech. Todos os direitos reservados.</p>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/gsap.min.js" integrity="sha384-3vCAhD+a3BOliP3QqjQINn6ZWiZxoqu0WFxX5ZQZgqekDZuSb1mJBrrLMmu94H8f" crossorigin="anonymous" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/ScrollTrigger.min.js" integrity="sha384-H2WL1iy/jKQQ7MTHU2hskZKNHTYWWD/KgKE1vCNnaWY8An2ESTh23KN/fTp8XS3j" crossorigin="anonymous" defer></script>
+<script src="script.js" defer></script>
 </body>
 </html>
