@@ -344,7 +344,7 @@ html:not(.motion) .hero-sheen--a{opacity:.55}
 
 @media (max-width:760px){
   .closing-main{grid-template-columns:minmax(0,1fr);align-content:center;gap:20px}
-  .closing-seal{order:-1;justify-self:start;width:min(48vw,24svh)}
+  .closing-seal{order:-1;justify-self:center;width:min(48vw,24svh)}
   .closing-ctas .pill{padding:0 20px}
 }
 /* celular estreito: WhatsApp e e-mail na mesma linha */
