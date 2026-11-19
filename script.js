@@ -179,8 +179,10 @@
   /* ---------- montador ---------- */
   (function builder() {
     const wrap = $('.b-opts'), link = $('.b-link'), rows = $$('.b-row', wrap);
-    const list = $('#b-chosen'), empty = $('#b-empty'), idea = $('#b-idea'), ideaWrap = $('#b-idea-wrap'), send = $('#b-send'), other = $('#opt-outra');
+    const list = $('#b-chosen'), empty = $('#b-empty'), idea = $('#b-idea'), ideaWrap = $('#b-idea-wrap'), send = $('#b-send'), sendWa = $('#b-send-wa'), other = $('#opt-outra');
     const subject = 'Quero elevar o meu negócio com a Ellevve Tech';
+    const waBase = 'https://wa.me/5561998366871?text=';
+    const waDefault = 'Olá! Vim pelo site da Ellevve Tech e quero conversar sobre o sistema da minha empresa.';
     const center = r => r.offsetTop + r.offsetHeight / 2;
     function layout() {
       const on = rows.filter(r => r.classList.contains('is-on'));
@@ -202,13 +204,13 @@
       const otherOn = other.getAttribute('aria-pressed') === 'true';
       ideaWrap.hidden = !otherOn;
       const text = otherOn ? idea.value.trim() : '';
-      let body = '';
+      let lines = null;
       if (labels.length) {
-        const lines = ['Olá, Ellevve Tech.', '', 'Quero conversar sobre:'];
+        lines = ['Olá, Ellevve Tech.', '', 'Quero conversar sobre:'];
         labels.forEach(l => lines.push('• ' + (l === 'Outra ideia' && text ? 'Outra ideia: ' + text : l)));
-        body = lines.join('\r\n');
       }
-      send.href = 'mailto:contato@ellevve.tech?subject=' + encodeURIComponent(subject) + (body ? '&body=' + encodeURIComponent(body) : '');
+      send.href = 'mailto:contato@ellevve.tech?subject=' + encodeURIComponent(subject) + (lines ? '&body=' + encodeURIComponent(lines.join('\r\n')) : '');
+      sendWa.href = waBase + encodeURIComponent(lines ? lines.join('\n') : waDefault);
       layout();
     }
     function set(btn, on) { btn.setAttribute('aria-pressed', String(on)); btn.closest('.b-row').classList.toggle('is-on', on); }
